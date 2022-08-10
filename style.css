@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@900&family=Inter&family=Josefin+Sans:wght@700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    animation: init .4s 1 0s ease-in;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start !important;
+    border-bottom: 1px solid #1b1b1b1b;
+    padding: 15px 10px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.774);
+    backdrop-filter: blur(2.5px);
+    z-index: 100;
+}
+
+section {
+    border-bottom: 1px solid #1b1b1b1b;
+    padding: 30px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 100% !important;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: .3s all;
+
+}
+
+nav li a {
+    font-weight: 605;
+}
+
+nav li a:hover {
+    color: #5b38e3;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+nav ul li::after {
+    content: "";
+    width: 0%;
+    transition: all .2s;
+    position: absolute;
+    background-color: #5b38e3;
+    height: 1px;
+    inset: 0;
+    margin: auto;
+    top: 25px;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+h3 {
+    margin: 10px;
+}
+
+h2 {
+    color: #202020;
+    font-size: 30px;
+    margin: 20px 0;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#logo {
+    font-size: 34px;
+    user-select: none;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: initAb 1s;
+}
+
+@keyframes initAb {
+    from {
+        transform: translateX(-50px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+h1 span {
+    color: #5b38e3;
+}
+
+
+.presentation h1 {
+    font-size: 4em;
+    text-align: left;
+    color: #202020;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+p {
+    color: #444;
+    font-size: 17px;
+}
+
+.about img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 0 20px;
+}
+
+
+
+.buttons {
+    margin-top: 55px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button,
+a button {
+    background-color: #5b38e3;
+    padding: 13px 40px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    width: 140px;
+    margin: 10px;
+    transition: all .3s;
+}
+
+.buttons img {
+    border-radius: 0px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+a button:hover,
+button:hover {
+    background-color: #482eaf;
+
+}
+
+#cvDownload {
+    background-color: #fff !important;
+    color: #202020;
+    border: 1px solid #202020;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+.lenguaje-logo {
+    text-align: center;
+}
+
+.skills {
+    width: 100%;
+    display: flex;
+    margin: 30px 0;
+    align-items: center;
+    padding: 30px;
+    justify-content: center;
+}
+
+.languages-skilss-container {
+    display: flex;
+    min-width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.buttons img {
+    border-radius: 0px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.lenguaje {
+    margin: 20px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.projects {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 30px;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    width: 350px;
+    height: 300px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.image-project img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+}
+
+.project-desctiprion {
+    width: 100%;
+    text-align: center;
+}
+
+.project-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.project-buttons button {
+    width: 109px;
+}
+
+.details {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transform: translateY(300px);
+    transition: .3s all;
+    background: rgba(255, 255, 255, 1.50);
+}
+
+
+.project:hover div+picture+.details {
+    transform: translateY(0px) !important;
+}
+
+.contact {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.button-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+    margin: 30px 0;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input,
+textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    height: 40px;
+    transition: all .3s;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid #053cbb;
+    position: relative;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+
+input:focus,
+textarea:focus {
+    border: 2px solid #5b38e3;
+}
+
+form {
+    width: 100%;
+}
+
+form button {
+    width: 80%;
+    margin: 10px 0;
+}
+
+#contact h1 {
+    font-size: 1.8em;
+}
+
+
+form div {
+    margin: 30px 0;
+    position: relative;
+}
+
+label {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 15px;
+    font-size: 13px;
+    color: #ccc;
+    transition: all .3s ease;
+}
+
+
+
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly !important;
+    padding-top: 80px;
+}
+
+
+
+
+h3 {
+    margin: 30px 0;
+}
+
+@media (max-width: 650px) {
+
+    html {
+        width: 100%;
+    }
+
+
+
+    .about picture {
+        width: min-content;
+    }
+
+    .about img {
+        width: 210px;
+        height: 210px;
+    }
+
+    nav ul li {
+        font-size: 12px;
+    }
+
+    .buttons img {
+        border-radius: 0px;
+        width: 50px !important;
+        height: 50px !important;
+        object-fit: contain;
+    }
+
+    .form-container {
+        width: 70%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-content: space-around;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        width: 100%;
+    }
+
+    nav ul li {
+        font-size: 12px;
+    }
+
+
+    .about img {
+        width: 230px;
+        height: 230px;
+    }
+
+
+
+    .project {
+        height: min-content;
+        overflow: initial;
+        z-index: 50;
+    }
+
+    .details {
+        transform: translateY(0);
+        height: min-content;
+        position: relative;
+        z-index: -1;
+        margin: 20px 0;
+        height: min-content;
+    }
+
+    .details .project-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+
+@keyframes init {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
